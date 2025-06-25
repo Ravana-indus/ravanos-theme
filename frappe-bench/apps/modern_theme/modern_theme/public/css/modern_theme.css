@@ -1,0 +1,321 @@
+/* /modern_theme/public/css/modern_theme.css */
+
+/* Import a modern font like Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Base Font */
+    --font-family-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+    /* Primary ClickUp-inspired Colors */
+    --primary: #7b68ee; /* A nice medium purple/blue */
+    --primary-hover: #6a5acd;
+    --primary-light: #f0e6ff;
+
+    /* Neutral Grays */
+    --text-color: #495057;
+    --text-light: #6c757d;
+    --text-extra-light: #adb5bd;
+    --heading-color: #212529;
+    --border-color: #dee2e6;
+    --light-gray: #f8f9fa;
+    --very-light-gray: #fafbfc;
+
+    /* Backgrounds */
+    --page-bg: #f8f9fa;
+    --control-bg: #ffffff;
+    --modal-bg: #ffffff;
+    --sidebar-bg: #ffffff;
+
+    /* Status & Alerts */
+    --green: #28a745;
+    --red: #dc3545;
+    --yellow: #ffc107;
+    --blue: #007bff;
+
+    /* Other UI Elements */
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.02);
+    --border-radius: 6px;
+}
+
+/* Apply the base font to the body */
+body {
+    font-family: var(--font-family-sans-serif) !important;
+}
+
+/* --- Sidebar Redesign --- */
+.standard-sidebar {
+    background-color: var(--sidebar-bg) !important;
+    border-right: 1px solid var(--border-color) !important;
+    box-shadow: var(--shadow) !important;
+    padding-top: 15px !important;
+}
+
+/* Sidebar item styling */
+.standard-sidebar .sidebar-section .sidebar-item {
+    padding: 10px 15px;
+    margin: 2px 0;
+    border-radius: var(--border-radius);
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.standard-sidebar .sidebar-section .sidebar-item a {
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* Hover state */
+.standard-sidebar .sidebar-section .sidebar-item:hover {
+    background-color: var(--light-gray);
+}
+
+.standard-sidebar .sidebar-section .sidebar-item:hover a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+/* Active state */
+.standard-sidebar .sidebar-section .sidebar-item.active {
+    background-color: var(--primary-light);
+}
+
+.standard-sidebar .sidebar-section .sidebar-item.active a {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Icons */
+.standard-sidebar .sidebar-section .sidebar-item .indicator {
+    color: var(--primary);
+}
+
+/* --- Header Redesign --- */
+.page-head {
+    background-color: var(--control-bg) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    box-shadow: none !important;
+}
+
+/* Primary header button */
+.page-head .btn-primary {
+    background-color: var(--primary) !important;
+    border: none !important;
+    box-shadow: var(--shadow) !important;
+    transition: background-color 0.2s;
+}
+
+.page-head .btn-primary:hover {
+    background-color: var(--primary-hover) !important;
+}
+
+/* Search bar */
+.search-bar {
+    border-radius: var(--border-radius) !important;
+    background-color: var(--light-gray) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.search-bar .form-control {
+    background-color: transparent !important;
+}
+
+/* User avatar / profile dropdown */
+.navbar-right .user-image {
+    border-radius: 50% !important;
+    border: 2px solid var(--primary-light);
+}
+
+.navbar-right .dropdown-toggle {
+    display: flex;
+    align-items: center;
+}
+
+/* --- Form Controls Redesign --- */
+
+/* Basic input and textarea styling */
+.form-control, .form-select {
+    border-radius: var(--border-radius) !important;
+    border: 1px solid var(--border-color) !important;
+    background-color: var(--control-bg) !important;
+    color: var(--text-color) !important;
+    padding: 8px 12px !important;
+    box-shadow: none !important;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 2px var(--primary-light) !important;
+}
+
+/* Form buttons */
+.btn {
+    border-radius: var(--border-radius) !important;
+    font-weight: 500;
+    padding: 8px 16px;
+    box-shadow: var(--shadow) !important;
+    transition: filter 0.2s;
+}
+
+.btn:hover {
+    filter: brightness(95%);
+}
+
+.btn-primary {
+    background-color: var(--primary) !important;
+    border: none !important;
+}
+
+.btn-secondary, .btn-default {
+    background-color: var(--control-bg) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-color) !important;
+}
+
+/* --- Form Layout & Page Structure --- */
+
+/* Main page container */
+.page-container {
+    background-color: var(--page-bg) !important;
+}
+
+/* Main form layout card */
+.form-layout {
+    background-color: var(--control-bg) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: var(--border-radius) !important;
+    box-shadow: var(--shadow) !important;
+}
+
+/* Form section headers */
+.form-section {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.section-head {
+    color: var(--heading-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Spacing between form fields */
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+/* --- List View Redesign --- */
+
+/* Main list container */
+.list-container {
+    background-color: var(--control-bg) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: var(--border-radius) !important;
+    box-shadow: var(--shadow) !important;
+}
+
+/* List headers */
+.list-row-head {
+    background-color: var(--light-gray) !important;
+    border-bottom: 2px solid var(--border-color) !important;
+}
+
+.list-row-head .list-col-heading {
+    color: var(--heading-color) !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+/* List rows */
+.list-row {
+    border-bottom: 1px solid var(--border-color) !important;
+    transition: background-color 0.2s;
+}
+
+.list-row:hover {
+    background-color: var(--primary-light) !important;
+}
+
+.list-row a {
+    color: var(--text-color) !important;
+}
+
+/* --- Dashboard Redesign --- */
+
+/* Dashboard widget card */
+.widget {
+    background-color: var(--control-bg) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: var(--border-radius) !important;
+    box-shadow: var(--shadow) !important;
+    padding: 20px !important;
+}
+
+.widget .widget-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--heading-color);
+}
+
+/* Number cards */
+.widget .widget-numeric-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* Chart styling */
+.frappe-chart .chart-axis-line,
+.frappe-chart .chart-axis-tick {
+    stroke: var(--border-color);
+}
+
+.frappe-chart .chart-label {
+    fill: var(--text-light);
+}
+
+.frappe-chart .bar .fill {
+    fill: var(--primary);
+}
+
+.frappe-chart .line .fill {
+    fill: var(--primary-light);
+}
+
+.frappe-chart .line .stroke {
+    stroke: var(--primary);
+}
+
+/* --- Global Components: Modals --- */
+
+.modal-content {
+    background-color: var(--modal-bg) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: var(--border-radius) !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+}
+
+.modal-header {
+    background-color: var(--light-gray) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    padding: 15px 20px !important;
+}
+
+.modal-header .modal-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--heading-color);
+}
+
+.modal-body {
+    padding: 20px !important;
+}
+
+.modal-footer {
+    background-color: var(--light-gray) !important;
+    border-top: 1px solid var(--border-color) !important;
+    padding: 15px 20px !important;
+} 
