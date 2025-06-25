@@ -1,0 +1,13 @@
+:root {
+  --clickup-purple: #7b68ee; --primary: var(--clickup-purple);
+  --text-color: #333; --border-color: #dee2e6;
+  --font-family-sans-serif: "Inter", -apple-system, sans-serif;
+}
+body {
+  font-family: var(--font-family-sans-serif);
+  color: var(--text-color);
+  background-color: #f8f9fa;
+}
+.navbar-default { background-color: #fff !important; border-bottom: 1px solid var(--border-color); }
+.page-sidebar { background-color: #fff; border-right: 1px solid var(--border-color); }
+.btn-primary { background-color: var(--primary); border-color: var(--primary); }
