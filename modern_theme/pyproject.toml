@@ -1,0 +1,15 @@
+[project]
+name = "modern_theme"
+authors = [
+    { name = "Modern Theme", email = "dev@example.com" }
+]
+description = "A modern theme for Frappe."
+requires-python = ">=3.10"
+readme = "README.md"
+version = "0.0.1"
+dependencies = [
+    # "frappe~=15.0.0" # Installed manually in the bench environment
+]
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta" 

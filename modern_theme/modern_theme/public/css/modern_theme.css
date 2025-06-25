@@ -1,0 +1,102 @@
+/* Modern Theme CSS */
+
+/*-- VARIABLE-DEFINITIONS --*/
+:root {
+  --clickup-purple: #7b68ee;
+  --clickup-purple-dark: #5a48d1;
+  --clickup-purple-light: #a094f3;
+  --clickup-pink: #ff559d;
+  --clickup-green: #00b884;
+  --clickup-yellow: #ffab00;
+  --clickup-red: #ff4d4d;
+  --clickup-blue: #29a0f5;
+  --clickup-dark-blue: #007bff;
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #6c757d;
+  --gray-700: #495057;
+  --gray-800: #343a40;
+  --gray-900: #212529;
+  --text-color: #333;
+  --text-color-light: #555;
+  --text-color-muted: var(--gray-600);
+  --border-color: var(--gray-300);
+  --border-radius: 6px;
+  --font-family-sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-size-base: 14px;
+  --line-height-base: 1.5;
+  --primary: var(--clickup-purple);
+  --primary-hover: var(--clickup-purple-dark);
+}
+
+/*-- BASE-STYLES --*/
+body {
+  font-family: var(--font-family-sans-serif);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--text-color);
+  background-color: var(--gray-100);
+}
+.navbar-default {
+  background-color: #fff !important;
+  border-bottom: 1px solid var(--border-color);
+}
+.page-sidebar {
+  background-color: #fff;
+  border-right: 1px solid var(--border-color);
+}
+.page-sidebar .sidebar-menu .sidebar-link,
+.page-sidebar .sidebar-menu .sidebar-group-title {
+  color: var(--text-color-light);
+}
+.page-sidebar .sidebar-menu .sidebar-link:hover,
+.page-sidebar .sidebar-menu .sidebar-link.active {
+  background-color: var(--clickup-purple-light);
+  color: #fff;
+}
+.page-sidebar .sidebar-menu .sidebar-group-title {
+  font-weight: 600;
+}
+.form-control, .form-select {
+  border-radius: var(--border-radius);
+  border-color: var(--border-color);
+}
+.form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(123, 104, 238, 0.25);
+}
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  border-radius: var(--border-radius);
+}
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+.list-item, .list-row {
+  border-radius: var(--border-radius);
+  background-color: #fff;
+  margin-bottom: 8px;
+  border: 1px solid var(--border-color);
+}
+.list-item:hover, .list-row:hover {
+  border-color: var(--primary);
+}
+.widget {
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.modal-content {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+}
+.modal-header {
+  background-color: var(--gray-100);
+  border-bottom-color: var(--border-color);
+} 
